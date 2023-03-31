@@ -1,8 +1,10 @@
+/*color scheme found within :root*/
 :root {
     --mystic-grey: #e9e9e9;
     --wintermint: #97c3a4;
     --nimbus-grey: #cccccc;
     --eucalyptus: #5eb19a;
+    --eucalyptus-grey: #bedbd3;
     --platinum: #e3e3e3;
     --spearmint: #70b39c;
     --slate-grey: #9b9b9b;
@@ -25,29 +27,77 @@
     --mint-sorbet: #c4e8e1;
     --onyx: #1a1a1a;
 }
-header {
-    height: 130px;
-    width: 100%;
-    background-color: var(--pistachio);
+/*body is not considered part of the toaster.... neither is footer.*/
+body {
+    height: 100vh; /* or a specific height if preferred */
+    background-color: var(--platinum);
+    flex-direction: column;
 }
-main{ 
-    height: 250px;
-    background-color: var(--graphite);
+/*items will be centered in the width of the main/header divs*/
+header {
+    height: auto;
+    width: 100%;
+    background-color: var(--ash-grey);
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*main div represents part of toaster where user interface will reside primarily... will use modals as well when determining how audio will be manipulated.*/
+main {
+    height: 60vh;
+    background-color: var(--ash-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px; /* Add some padding to the main element for visual spacing */
 }
 main h1 {
     justify-content: center;
 }
-
-.top_stripe {
-    height: 25px;
-    background-color: var(--onyx);
-}
-.mid_stripe {
-    height: 25px;
+/*footer will act as progress bar for audio conversions*/
+footer {
     background-color: var(--sage);
+    height: 15vh;
+    position: relative;
+    border-top: 1px solid black; /* Add a top border to the footer element */
+    padding: 20px; /* Add some padding to the footer element for visual spacing */
+    margin-top: -1px;
 }
-.low_stripe {
+.input_area {
+    background-color: var(--battleship-grey);
+    border-radius: 5px;
+}
+/*file input button will have custom styling, no ugly UI!*/
+.file_input {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--iron-grey);
+    color: #333;
+    font-size: 16px;
+}
+/*These represent the inside of the toaster... simple cooking/toasting animation is planned for development*/
+.cooker_coils {
+    width: 93%;
+    transform: translateY(25px);
+
+}
+.stripe_1 {
+    height: 20px;
+    background-color: var(--slate-grey);
+}
+.stripe_2 {
     height: 25px;
-    background-color: var(--mint-leaf);
+    background-color: var(--battleship-grey);
+}
+.stripe_3 {
+    height: 30px;
+    background-color: var(--iron-grey);
+}
+.stripe_4 {
+    height: 45px; 
+    background-color: var(--graphite);
 }
