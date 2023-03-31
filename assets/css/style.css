@@ -38,6 +38,7 @@ header {
     height: auto;
     width: 100%;
     background-color: var(--ash-grey);
+    border-radius: 10px 10px 0px 0px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -83,21 +84,26 @@ footer {
 .cooker_coils {
     width: 93%;
     transform: translateY(25px);
-
 }
 .stripe_1 {
+    display: block;
+    border-radius: 5px 5px 0px 0px;
     height: 20px;
     background-color: var(--slate-grey);
 }
 .stripe_2 {
+    display: block;
     height: 25px;
     background-color: var(--battleship-grey);
 }
 .stripe_3 {
+    display: block;
     height: 30px;
     background-color: var(--iron-grey);
 }
 .stripe_4 {
-    height: 45px; 
+    display: block;
+    height: 35px; 
     background-color: var(--graphite);
+    border-radius: 0px 0px 15px 15px;
 }
