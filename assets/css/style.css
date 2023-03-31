@@ -1,0 +1,53 @@
+:root {
+    --mystic-grey: #e9e9e9;
+    --wintermint: #97c3a4;
+    --nimbus-grey: #cccccc;
+    --eucalyptus: #5eb19a;
+    --platinum: #e3e3e3;
+    --spearmint: #70b39c;
+    --slate-grey: #9b9b9b;
+    --seafoam: #4ca180;
+    --silver-cloud: #d7d7d7;
+    --mint-frost: #6cb79f;
+    --ash-grey: #b2b2b2;
+    --frosted-mint: #8dd1c9;
+    --battleship-grey: #7f7f7f;
+    --sage: #3d8e7f;
+    --smoke-grey: #9e9e9e;
+    --mint-leaf: #31bfa3;
+    --pebble-grey: #bfbfbf;
+    --mint-ice: #a7dcd5;
+    --iron-grey: #666666;
+    --pistachio: #92c5a9;
+    --graphite: #4d4d4d;
+    --pale-green: #b5d7c9;
+    --charcoal: #333333;
+    --mint-sorbet: #c4e8e1;
+    --onyx: #1a1a1a;
+}
+header {
+    height: 130px;
+    width: 100%;
+    background-color: var(--pistachio);
+}
+main{ 
+    height: 250px;
+    background-color: var(--graphite);
+    display: flex;
+}
+main h1 {
+    justify-content: center;
+}
+
+.top_stripe {
+    height: 25px;
+    background-color: var(--onyx);
+}
+.mid_stripe {
+    height: 25px;
+    background-color: var(--sage);
+}
+.low_stripe {
+    height: 25px;
+    background-color: var(--mint-leaf);
+}
