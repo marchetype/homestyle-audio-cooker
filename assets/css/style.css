@@ -22,10 +22,20 @@
     --iron-grey: #666666;
     --pistachio: #92c5a9;
     --graphite: #4d4d4d;
+    --graphite_orange: #361b11;
     --pale-green: #b5d7c9;
     --charcoal: #333333;
     --mint-sorbet: #c4e8e1;
     --onyx: #1a1a1a;
+    --orange1: #b88c6b;
+    --orange1_2: #d7803c;
+    --orange2: #a77355;
+    --orange2_2: #da6927;
+    --orange3: #aa573d;
+    --orange3_2: #d23d10;
+    --orange4: #96572a;
+    --orange4_2: #9c4100;
+
 }
 /*body is not considered part of the toaster.... neither is footer.*/
 body {
@@ -90,20 +100,94 @@ footer {
     border-radius: 5px 5px 0px 0px;
     height: 20px;
     background-color: var(--slate-grey);
+    animation: color-fade1 4s linear infinite;
 }
+
 .stripe_2 {
     display: block;
     height: 25px;
     background-color: var(--battleship-grey);
+    animation: color-fade2 4s linear infinite;
 }
 .stripe_3 {
     display: block;
     height: 30px;
     background-color: var(--iron-grey);
+    animation: color-fade3 4s linear infinite;
 }
 .stripe_4 {
     display: block;
     height: 35px; 
     background-color: var(--graphite);
     border-radius: 0px 0px 15px 15px;
+    animation: color-fade4 4s linear infinite;
+}
+/*color-fade animations below*/
+@keyframes color-fade1 {
+    0% {
+        background-color: var(--slate-grey);
+    }
+    28% {
+        background-color: var(--orange1);
+    }
+    55% {
+        background-color: var(--orange1_2);
+    }
+    78% {
+        background-color: var(--orange1);
+    }
+    100% {
+        background-color: var(--slate-grey);
+    }
+}
+@keyframes color-fade2 {
+    0% {
+        background-color: var(--battleship-grey);
+    }
+    27% {
+        background-color: var(--orange2);
+    }
+    55% {
+        background-color: var(--orange2_2);
+    }
+    77% {
+        background-color: var(--orange2);
+    }
+    100% {
+        background-color: var(--battleship-grey);
+    }
+}
+@keyframes color-fade3 {
+    0% {
+        background-color: var(--iron-grey);
+    }
+    26% {
+        background-color: var(--orange3);
+    }
+    55% {
+        background-color: var(--orange3_2);
+    }
+    76% {
+        background-color: var(--orange3);
+    }
+    100% {
+        background-color: var(--iron-grey);
+    }
+}
+@keyframes color-fade4 {
+    0% {
+        background-color: var(--graphite_orange);
+    }
+    25% {
+        background-color: var(--orange4);
+    }
+    55% {
+        background-color: var(--orange4_2);
+    }
+    75% {
+        background-color: var(--orange4);
+    }
+    100% {
+        background-color: var(--graphite_orange);
+    }
 }
