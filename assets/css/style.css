@@ -1,49 +1,52 @@
-/*color scheme found within :root*/
+/* color scheme found within :root, MUST CONDENSE COLOR SCHEME AND MAKE IT MORE READABLE USING ARRAYS */
 :root {
-    --mystic-grey: #e9e9e9;
+    --animation-duration: 4s;
+
+
+    --seafoam: #4ca180;
+    --sage: #3d8e7f;
+    --mint-leaf: #31bfa3;
+    --pistachio: #92c5a9;
     --wintermint: #97c3a4;
-    --nimbus-grey: #cccccc;
     --eucalyptus: #5eb19a;
+    --mint-frost: #6cb79f;
+    --spearmint: #70b39c;
+    --frosted-mint: #8dd1c9;
+    --pale-green: #b5d7c9;
+    --mint-sorbet: #c4e8e1;
+    --mint-ice: #a7dcd5;
     --eucalyptus-grey: #bedbd3;
     --platinum: #e3e3e3;
-    --spearmint: #70b39c;
-    --slate-grey: #9b9b9b;
-    --seafoam: #4ca180;
     --silver-cloud: #d7d7d7;
-    --mint-frost: #6cb79f;
-    --ash-grey: #b2b2b2;
-    --frosted-mint: #8dd1c9;
-    --battleship-grey: #7f7f7f;
-    --sage: #3d8e7f;
+    --mystic-grey: #e9e9e9;
     --smoke-grey: #9e9e9e;
-    --mint-leaf: #31bfa3;
+    --slate-grey: #9b9b9b;
+    --nimbus-grey: #cccccc;
     --pebble-grey: #bfbfbf;
-    --mint-ice: #a7dcd5;
+    --ash-grey: #b2b2b2;
+    --battleship-grey: #7f7f7f;
     --iron-grey: #666666;
-    --pistachio: #92c5a9;
-    --graphite: #4d4d4d;
-    --graphite_orange: #361b11;
-    --pale-green: #b5d7c9;
     --charcoal: #333333;
-    --mint-sorbet: #c4e8e1;
     --onyx: #1a1a1a;
-    --orange1: #b88c6b;
     --orange1_2: #d7803c;
-    --orange2: #a77355;
     --orange2_2: #da6927;
-    --orange3: #aa573d;
     --orange3_2: #d23d10;
+    --graphite_orange: #361b11;
+    --orange1: #b88c6b;
+    --orange2: #a77355;
+    --orange3: #aa573d;
     --orange4: #96572a;
     --orange4_2: #9c4100;
+    --graphite: #4d4d4d;
 
 }
-/*body is not considered part of the toaster.... neither is footer.*/
+/* body is not considered part of the toaster.... neither is footer. */
 body {
     height: 100vh; /* or a specific height if preferred */
     background-color: var(--platinum);
     flex-direction: column;
 }
-/*items will be centered in the width of the main/header divs*/
+/* items will be centered in the width of the main/header divs */
 header {
     height: auto;
     width: 100%;
@@ -54,7 +57,7 @@ header {
     justify-content: center;
     align-items: center;
 }
-/*main div represents part of toaster where user interface will reside primarily... will use modals as well when determining how audio will be manipulated.*/
+/* main div represents part of toaster where user interface will reside primarily... will use modals as well when determining how audio will be manipulated. */
 main {
     height: 60vh;
     background-color: var(--ash-grey);
@@ -68,20 +71,20 @@ main {
 main h1 {
     justify-content: center;
 }
-/*footer will act as progress bar for audio conversions*/
+/* footer will act as base of progress bar for audio conversions */
 footer {
     background-color: var(--sage);
     height: 15vh;
     position: relative;
-    border-top: 1px solid black; /* Add a top border to the footer element */
-    padding: 20px; /* Add some padding to the footer element for visual spacing */
+    border-top: 1px solid black; 
+    padding: 10px;
     margin-top: -1px;
 }
 .input_area {
     background-color: var(--battleship-grey);
     border-radius: 5px;
 }
-/*file input button will have custom styling, no ugly UI!*/
+/* file input button will have custom styling, no ugly UI! */
 .file_input {
     display: block;
     padding: 10px;
@@ -90,37 +93,49 @@ footer {
     color: #333;
     font-size: 16px;
 }
-/*These represent the inside of the toaster... simple cooking/toasting animation is planned for development*/
+/* these represent the inside of the toaster... simple cooking/toasting animation is planned for development */
 .cooker_coils {
     width: 93%;
     transform: translateY(25px);
 }
-.stripe_1 {
+/* IDs take a walk so that temporary class animations can go for a run */
+#stripe_1 {
     display: block;
     border-radius: 5px 5px 0px 0px;
     height: 20px;
     background-color: var(--slate-grey);
-    animation: color-fade1 4s linear infinite;
 }
-
-.stripe_2 {
+#stripe_2 {
     display: block;
     height: 25px;
     background-color: var(--battleship-grey);
-    animation: color-fade2 4s linear infinite;
 }
-.stripe_3 {
+#stripe_3 {
     display: block;
     height: 30px;
     background-color: var(--iron-grey);
-    animation: color-fade3 4s linear infinite;
 }
-.stripe_4 {
+#stripe_4 {
     display: block;
     height: 35px; 
     background-color: var(--graphite);
     border-radius: 0px 0px 15px 15px;
-    animation: color-fade4 4s linear infinite;
+}
+/* animation classes are not active now, but will be used with upcoming JS logic implementation */
+.stripe_1_ani {
+    animation: color-fade1 var(--animation-duration) ease-out infinite;
+}
+  
+.stripe_2_ani {
+    animation: color-fade2 var(--animation-duration) ease-out infinite;
+}
+  
+.stripe_3_ani {
+    animation: color-fade3 var(--animation-duration) ease-out infinite;
+}
+  
+.stripe_4_ani {
+    animation: color-fade4 var(--animation-duration) ease-out infinite;
 }
 /*color-fade animations below*/
 @keyframes color-fade1 {
