@@ -4,6 +4,7 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 const handlebars = require('handlebars');
+const fs = require('fs');
 //define a function that renders a view using Handlebars
 function renderView(viewName, data) {
     //generate the file path of the view file
@@ -25,9 +26,9 @@ function createWindow () {
         webPreferences: {
             nodeIntegration: true
         }
-    })
-    //loading our index.html file to view
-    win.loadFile('index.html');
+    });
+    //HAVING TROUBLE WITH VIEW HERE
+    renderView('main', { body: 'body content'})
 }
 //if there are no browser windows open, open one
 app.whenReady().then(() => {
