@@ -2,7 +2,7 @@
 const ffmpeg = require('fluent-ffmpeg');
 //command will be used to interact with API
 const command = ffmpeg();
-const inputPath = './fileInput';
 const outputPath = './fileOutput';
+let inputFile;
 
-command.input(inputPath);
+command.input(inputFile);

@@ -85,13 +85,19 @@ footer {
     border-radius: 5px;
 }
 /* file input button will have custom styling, no ugly UI! */
-.file_input {
+#file-input {
     display: block;
     padding: 10px;
     border-radius: 5px;
     background-color: var(--iron-grey);
     color: #333;
     font-size: 16px;
+}
+.btn_visible {
+    visibility: visible;
+}
+.btn_invisible {
+    visibility: hidden;
 }
 /* these represent the inside of the toaster... simple cooking/toasting animation is planned for development */
 .cooker_coils {

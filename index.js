@@ -1,6 +1,7 @@
 const electron = require('electron');
 //requiring electron in order to initialize the GUI
 const { app, BrowserWindow } = electron;
+
 //handlebars imports
 const path = require('path');
 const url = require('url');
@@ -9,6 +10,7 @@ const fs = require('fs');
 
 let mainWindow;
 //define a function that renders a view using Handlebars
+
 function renderView(viewName, data) {
     //generate the file path of the view file
     const viewPath = path.join(__dirname, 'views/layout', `${viewName}.hbs`);
@@ -21,7 +23,8 @@ function renderView(viewName, data) {
     const html = template(data);
     //load the generated HTML into the main Electron window
     mainWindow.loadURL(`data:text/html;charset=UTF-8,${encodeURIComponent(html)}`);
-  }
+}
+
 //creating a new window, with height/width dimensions listed.
 function createWindow () {
     mainWindow = new BrowserWindow({
@@ -34,15 +37,25 @@ function createWindow () {
     mainWindow.webContents.on('did-finish-load', function() {
         mainWindow.webContents.insertCSS(fs.readFileSync(path.join(__dirname, 'assets/css/style.css'), 'utf8'));
       });
-    renderView('main', { body: 
-       `<h1></h1>
-        <section class="input_area">
-        <button
-        </section>`
+    renderView('main', {
+        title: `
+        <h1>Audio Chef</h1>
+        `,
+        body: `
+        <h2>Let me cook for you!</h2>
+        `,
+        inputfield: `
+        <button id="file-input"></button>
+        `,
+        btnfield: `
+        <button id="cook-btn" class="btn_invisible">button</button>
+        `,
+
     }, mainWindow);
     //HAVING TROUBLE WITH VIEW HERE
     //win.renderView('main', { body: 'body content'});
 }
+
 //if there are no browser windows open, open one
 app.whenReady().then(() => {
     createWindow();
@@ -51,7 +64,10 @@ app.whenReady().then(() => {
         if(BrowserWindow.getAllWindows().length === 0) createWindow();
     })
 })
+
 //close app functionality
 app.on('window-all-closed', function() {
     if(process.platform !== 'darwin') app.quit()
 })
+
+module.exports = renderView;
