@@ -19,8 +19,7 @@
   },
   "homepage": "https://github.com/marchetype/homestyle-audio-cooker#readme",
   "dependencies": {
-    "fluent-ffmpeg": "^2.1.2",
-    "handlebars": "^4.7.7"
+    "fluent-ffmpeg": "^2.1.2"
   },
   "devDependencies": {
     "electron": "^23.2.1"

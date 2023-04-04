@@ -84,8 +84,8 @@ footer {
     background-color: var(--battleship-grey);
     border-radius: 5px;
 }
-/* file input button will have custom styling, no ugly UI! */
-#file-input {
+/* link input area will have custom styling, no ugly UI! */
+#link-input {
     display: block;
     padding: 10px;
     border-radius: 5px;
@@ -93,11 +93,11 @@ footer {
     color: #333;
     font-size: 16px;
 }
-.btn_visible {
-    visibility: visible;
-}
-.btn_invisible {
-    visibility: hidden;
+/* button styling below */
+.convert_btn {
+    height: 40%;
+    width: 100%;
+    border: 2px solid var(--eucalyptus);
 }
 /* these represent the inside of the toaster... simple cooking/toasting animation is planned for development */
 .cooker_coils {
